@@ -13,7 +13,8 @@ import java.io.IOException;
 public class BelajarJGit {
 
     public static void main(String[] args) throws IOException, GitAPIException {
-        String gitRepository = new StringBuilder(System.getProperty("user.home")).append(File.separator).append("default").append(File.separator).append("test").append(File.separator).append(".git").toString();
+        String gitRepository = new StringBuilder(System.getProperty("user.home"))
+                .append(File.separator).append("default").append(File.separator).append("test").append(File.separator).append(".git").toString();
         FileRepositoryBuilder builder = new FileRepositoryBuilder();
         Repository repository = builder.setGitDir(new File(gitRepository))
                 .readEnvironment() // scan environment GIT_* variables
@@ -27,8 +28,5 @@ public class BelajarJGit {
 
         CommitCommand commitComand = git.commit();
         commitComand.setMessage("Add and object").call();
-
-//        git.branchCreate().setName("Development").call();
-        git.checkout().setName("Development").call();
     }
 }
