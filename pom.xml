@@ -10,10 +10,43 @@
 
     <properties>
         <maven.test.skip>true</maven.test.skip>
+        <jgit.version>4.11.0.201803080745-r</jgit.version>
     </properties>
 
-    <dependencies>
+    <repositories>
+        <repository>
+            <id>jgit-repository</id>
+            <url>https://repo.eclipse.org/content/groups/releases/</url>
+        </repository>
+    </repositories>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.eclipse.jgit</groupId>
+            <artifactId>org.eclipse.jgit</artifactId>
+            <version>${jgit.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jgit</groupId>
+            <artifactId>org.eclipse.jgit.http.server</artifactId>
+            <version>${jgit.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jgit</groupId>
+            <artifactId>org.eclipse.jgit.ui</artifactId>
+            <version>${jgit.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jgit</groupId>
+            <artifactId>org.eclipse.jgit.junit</artifactId>
+            <version>${jgit.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
