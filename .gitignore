@@ -1,0 +1,5 @@
+# application
+target/
+.idea
+.DS_Store
+*.iml
